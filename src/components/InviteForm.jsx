@@ -5,7 +5,10 @@ export default function InviteForm({ onSubmit }) {
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
-    setForm(prev => ({ ...prev, [name]: type === 'checkbox' ? checked : value }));
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   }
 
   function handleSubmit(e) {
@@ -14,15 +17,41 @@ export default function InviteForm({ onSubmit }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{ flex: 1, maxWidth: 420 }}>
+    <form onSubmit={handleSubmit} style={{ flex: 1, width: "100%" }}>
       <div style={{ marginBottom: 8 }}>
-        <label style={{ display: "block", fontSize: 13, marginBottom: 6 }}>Your name</label>
-        <input name="name" value={form.name} onChange={handleChange} required style={{ width: "100%", padding: 10, borderRadius: 6, border: "1px solid #ddd" }} />
+        <label style={{ display: "block", fontSize: 13, marginBottom: 6 }}>
+          Your name
+        </label>
+        <input
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+          required
+          style={{
+            width: "100%",
+            padding: 10,
+            borderRadius: 6,
+            border: "1px solid #ddd",
+          }}
+        />
       </div>
 
       <div style={{ marginBottom: 8 }}>
-        <label style={{ display: "block", fontSize: 13, marginBottom: 6 }}>Relation with groom</label>
-        <select name="relation" value={form.relation} onChange={handleChange} required style={{ width: "100%", padding: 10, borderRadius: 6, border: "1px solid #ddd" }}>
+        <label style={{ display: "block", fontSize: 13, marginBottom: 6 }}>
+          Relation with groom
+        </label>
+        <select
+          name="relation"
+          value={form.relation}
+          onChange={handleChange}
+          required
+          style={{
+            width: "100%",
+            padding: 10,
+            borderRadius: 6,
+            border: "1px solid #ddd",
+          }}
+        >
           <option value="">-- choose relation --</option>
           <option value="friend">Friend</option>
           <option value="nephew">Nephew</option>
@@ -38,12 +67,28 @@ export default function InviteForm({ onSubmit }) {
 
       <div style={{ marginBottom: 12 }}>
         <label style={{ fontSize: 13 }}>
-          <input type="checkbox" name="older" checked={form.older} onChange={handleChange} /> &nbsp; Is the guest older than the groom?
+          <input
+            type="checkbox"
+            name="older"
+            checked={form.older}
+            onChange={handleChange}
+          />{" "}
+          &nbsp; Is the guest older than the groom?
         </label>
       </div>
 
       <div>
-        <button type="submit" style={{ background: "#d97706", color: "white", padding: "10px 14px", borderRadius: 8, border: "none", cursor: "pointer" }}>
+        <button
+          type="submit"
+          style={{
+            background: "#d97706",
+            color: "white",
+            padding: "10px 14px",
+            borderRadius: 8,
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
           Get Invitation
         </button>
       </div>

@@ -4,7 +4,8 @@ import ReactPlayer from "react-player";
 function relationToHonorific(relation, isOlder) {
   const rel = (relation || "").toLowerCase();
   if (rel.includes("uncle") || rel.includes("chacha")) return "Chacha ji";
-  if (rel.includes("aunt") || rel.includes("mausi") || rel.includes("chachi")) return "Chachi ji";
+  if (rel.includes("aunt") || rel.includes("mausi") || rel.includes("chachi"))
+    return "Chachi ji";
   if (rel.includes("nephew")) return isOlder ? "Bhaiya ji" : "Beta";
   if (rel.includes("niece")) return "Beti";
   if (rel.includes("father")) return "Pitaji";
@@ -33,8 +34,8 @@ export default function GroomVideo({ guest }) {
   }, [guest]);
 
   return (
-    <div style={{ display: "flex", gap: 20 }}>
-      <div style={{ width: 360 }}>
+    <div style={{ display: "flex", gap: 20, flexDirection: "column" }}>
+      <div style={{}}>
         <ReactPlayer
           ref={playerRef}
           url="/groom_base.mp4"
@@ -44,22 +45,30 @@ export default function GroomVideo({ guest }) {
           height="100%"
         />
         <p style={{ fontSize: 13, color: "#555", marginTop: 8 }}>
-          Video plays and browser TTS speaks the personalized invitation (Hindi).
+          Video plays and browser TTS speaks the personalized invitation
+          (Hindi).
         </p>
       </div>
 
-      <div style={{ flex: 1 }}>
+      {/* <div style={{ flex: 1 }}>
         <h3>Preview invitation text</h3>
-        <div style={{ background: "#fff7ed", padding: 12, borderRadius: 8, border: "1px solid #fde68a" }}>
+        <div
+          style={{
+            background: "#fff7ed",
+            padding: 12,
+            borderRadius: 8,
+            border: "1px solid #fde68a",
+          }}
+        >
           <InvitationPreview guest={guest} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
 
 function InvitationPreview({ guest }) {
-  const groomName = "Rahul Upadhyay";
+  const groomName = "Jaswant Upadhyay";
   const honorific = relationToHonorific(guest.relation, guest.older);
   const toName = honorific ? `${guest.name} ${honorific}` : guest.name;
   const text = `Namaste ${toName}, main ${groomName} aapko meri shaadi ka invitation deta hoon. Aasha karta hoon aap aayenge aur shaadi ki shobha badhayenge. Dhanyavaad.`;
