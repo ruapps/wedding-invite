@@ -28,7 +28,7 @@ export default function App() {
         >
           <div style={{}}>
             <img
-              src="/groom.png"
+              src="/wedding-invite/groom.png"
               alt="Groom"
               style={{
                 width: "100%",
