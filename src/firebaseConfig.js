@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAuth, signInAnonymously } from "firebase/auth";
 import {
   getStorage,
   ref as storageRef,
@@ -25,8 +26,30 @@ const firebaseConfig = {
   appId: "1:101943601741:web:03d98a04143db073954a04",
 };
 
+
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// automatically sign in anonymously when file is imported (will be called once)
+signInAnonymously(auth).catch((err) => {
+  console.warn("Anonymous sign-in failed", err);
+});
+
 const storage = getStorage(app);
 const db = getFirestore(app);
 
-export { storage, storageRef, uploadBytesResumable, getDownloadURL, db, collection, addDoc, serverTimestamp, query, orderBy, onSnapshot };
+
+export {
+  auth,
+  storage,
+  storageRef,
+  uploadBytesResumable,
+  getDownloadURL,
+  db,
+  collection,
+  addDoc,
+  serverTimestamp,
+  query,
+  orderBy,
+  onSnapshot
+};
