@@ -20,12 +20,12 @@ p {
   font-weight: "800";
   font-size: 22px !important;
   color: #ff1493;
-  text-shadow: 0 0 1px #dc143c;
+  text-shadow: 0 0 3px #fff;
 }
 
 h1,
 h2,
 h3 {
   color: #dc143c;
-  text-shadow: 1px 1px 4px #ff1493;
+  text-shadow: 1px 1px 4px #fff;
 }

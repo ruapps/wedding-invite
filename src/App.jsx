@@ -22,26 +22,52 @@ export default function App() {
         margin: "0 auto",
       }}
     >
-      <h1
-        style={{
-          textAlign: "center",
-          fontFamily: "Parisienne, sans-serif",
-          fontWeight: "400",
-          fontSize: "48px",
-          lineHeight: "70px",
-        }}
-      >
-        <span
+      <div>
+        <h1
           style={{
-            fontSize: "80px",
-            fontFamily: "Parisienne",
-            fontWeight: "600",
+            textAlign: "center",
+            fontFamily: "Parisienne, sans-serif",
+            fontWeight: "400",
+            fontSize: "48px",
+            lineHeight: "70px",
           }}
         >
-          Jaswant's
-        </span>{" "}
-        Wedding Invitation
-      </h1>
+          <span
+            style={{
+              fontSize: "90px",
+              fontFamily: "Parisienne",
+              fontWeight: "600",
+              display: "inline-block",
+              position: "relative",
+              left: "-30px",
+            }}
+          >
+            Jaswant
+          </span>
+          <div
+            style={{
+              fontSize: "55px",
+              fontFamily: "Parisienne",
+            }}
+          >
+            weds
+          </div>
+          <span
+            style={{
+              fontSize: "90px",
+              fontFamily: "Parisienne",
+              fontWeight: "600",
+              display: "block",
+              position: "relative",
+              right: "-85px",
+              lineHeight: "100px",
+            }}
+          >
+            Kirti
+          </span>
+          Wedding Invitation
+        </h1>
+      </div>
 
       <video width="100%" height="500" loop playsInline autoPlay controls>
         <source
