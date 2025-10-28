@@ -1,1 +1,31 @@
-*{box-sizing:border-box}body{margin:0;background:#fffaf0;color:#111}input,select,button{font-family:inherit}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #fffaf0;
+  color: #111;
+  background-image: url("/wedding-invite-back.jpg");
+  background-attachment: fixed;
+}
+input,
+select,
+button {
+  font-family: "Quicksand";
+  color: red;
+}
+label,
+p {
+  font-family: "Pacifico";
+  font-weight: "800";
+  font-size: 22px !important;
+  color: #ff1493;
+  text-shadow: 0 0 1px #dc143c;
+}
+
+h1,
+h2,
+h3 {
+  color: #dc143c;
+  text-shadow: 1px 1px 4px #ff1493;
+}

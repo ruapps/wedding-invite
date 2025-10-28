@@ -20,7 +20,7 @@ export default function InviteForm({ onSubmit }) {
     <form onSubmit={handleSubmit} style={{ flex: 1, width: "100%" }}>
       <div style={{ marginBottom: 8 }}>
         <label style={{ display: "block", fontSize: 13, marginBottom: 6 }}>
-          Your name
+          Your name ( कृपया अपना पहला नाम डालें)
         </label>
         <input
           name="name"
@@ -38,7 +38,8 @@ export default function InviteForm({ onSubmit }) {
 
       <div style={{ marginBottom: 8 }}>
         <label style={{ display: "block", fontSize: 13, marginBottom: 6 }}>
-          Relation with groom
+          Relation with groom ( आप जसवंत के क्या लगते या लगती हैं जैसे- बहन,
+          चाचा या बड़े भैया )
         </label>
         <select
           name="relation"
@@ -53,15 +54,17 @@ export default function InviteForm({ onSubmit }) {
           }}
         >
           <option value="">-- choose relation --</option>
-          <option value="friend">Friend</option>
-          <option value="nephew">Nephew</option>
-          <option value="niece">Niece</option>
-          <option value="uncle">Uncle (Chacha)</option>
-          <option value="aunt">Aunt (Chachi / Mausi)</option>
-          <option value="cousin">Cousin</option>
-          <option value="father">Father</option>
-          <option value="mother">Mother</option>
-          <option value="sibling">Sibling</option>
+          <option value="friend">Friend ( दोस्त )</option>
+          <option value="nephew">Nephew ( भतीजा )</option>
+          <option value="niece">Niece ( भतीजी )</option>
+          <option value="uncle">Uncle ( चाचा )</option>
+          <option value="chachi">Chachi ( चाची )</option>
+          <option value="mausa">Mausa ( मौसा )</option>
+          <option value="mausi"> Mausi ( मौसी )</option>
+          <option value="brother">Brother ( भाई )</option>
+          <option value="sister">Sister ( बहन )</option>
+          <option value="fufa">Fufa ( फूफा )</option>
+          <option value="bua">Bua ( बुआ )</option>
         </select>
       </div>
 
@@ -73,7 +76,8 @@ export default function InviteForm({ onSubmit }) {
             checked={form.older}
             onChange={handleChange}
           />{" "}
-          &nbsp; Is the guest older than the groom?
+          &nbsp; Is the guest older than the groom? ( क्या आप जसवंत से बड़े हैं
+          और उनके भाई या बहन लगते हैं? अगर हां तो बॉक्स टिक करें अन्यथा नहीं )
         </label>
       </div>
 
