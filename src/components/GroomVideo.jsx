@@ -170,7 +170,7 @@ export default function GroomVideo({ guest }) {
         {/* Show image when NOT playing, show video when playing */}
         {!isPlaying ? (
           <img
-            src={groomImage}
+            src={`${import.meta.env.BASE_URL}assets/groom.jpeg`}
             alt="Groom"
             style={{
               width: 360,
@@ -191,7 +191,7 @@ export default function GroomVideo({ guest }) {
           >
             <ReactPlayer
               ref={playerRef}
-              url={groomVideo}
+              url={`${import.meta.env.BASE_URL}assets/groom_talking.mp4`}
               playing={true}
               loop={false}
               controls={false}

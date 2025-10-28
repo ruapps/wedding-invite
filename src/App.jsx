@@ -43,8 +43,11 @@ export default function App() {
         Wedding Invitation
       </h1>
 
-      <video width="100%" height="500" loop playsInline autoPlay>
-        <source src="/wedding-invite/wedding-invitation.mp4" type="video/mp4" />
+      <video width="100%" height="500" loop playsInline autoPlay controls>
+        <source
+          src={`${import.meta.env.BASE_URL}wedding-invitation.mp4`}
+          type="video/mp4"
+        />
       </video>
 
       <MagicText />
@@ -60,7 +63,7 @@ export default function App() {
         >
           <div style={{}}>
             <img
-              src="/wedding-invite/src/assets/groom.jpeg"
+              src={`${import.meta.env.BASE_URL}assets/groom.jpeg`}
               alt="Groom"
               style={{
                 width: "100%",
