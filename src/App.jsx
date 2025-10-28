@@ -71,7 +71,7 @@ export default function App() {
 
       <video width="100%" height="500" loop playsInline autoPlay controls>
         <source
-          src={`${import.meta.env.BASE_URL}wedding-invitation.mp4`}
+          src={`${import.meta.env.BASE_URL}weddinginvitation2.mp4`}
           type="video/mp4"
         />
       </video>
