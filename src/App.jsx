@@ -89,7 +89,7 @@ export default function App() {
         >
           <div style={{}}>
             <img
-              src={`${import.meta.env.BASE_URL}assets/groom.jpeg`}
+              src={`${import.meta.env.BASE_URL}assets/groomimage2.jpeg`}
               alt="Groom"
               style={{
                 width: "100%",
